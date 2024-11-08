@@ -1,7 +1,19 @@
 # Workshop - Databasemigraties met Laravel
+Volg de onderstaande stappen om de applicatie klaar te zetten voor het eerste gebruik!
 
-Applicatie starten
-`php artisan serve`
+- .env moet bestaan
+- Het `database/database.sqlite` bestsand moet aangemaakt worden
+
+1. Installeer afhankelijkheden (dependencies): `composer install`
+2. Setup toepassen: `php artisan migrate`
+3. Applicatie starten: `php artisan serve`
+
+Volg de bovenstaande stappen om de applicatie klaar te zetten voor het eerste gebruik!
+---
+---
+---
+---
+---
 
 ## Algemene informatie
 - Error log bestanden staan in logs/laravel.log
