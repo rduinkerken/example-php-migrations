@@ -70,3 +70,7 @@ Inhoud de migratie (dus wat de migratie moet doen) moet nog geschreven worden.
 
 ## Migraties 'pretenden' en SQL query ervan inzien
 `php artisan migrate --pretend`
+
+## Informatieve bronnen
+- https://laravel.com/docs/11.x/migrations
+- https://en.wikipedia.org/wiki/Schema_migration
