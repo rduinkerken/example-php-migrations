@@ -1,5 +1,5 @@
 # Workshop - Databasemigraties met Laravel
-Volg de onderstaande stappen om de applicatie klaar te zetten voor het eerste gebruik!
+**Volg de onderstaande stappen om de applicatie klaar te zetten voor het eerste gebruik!**
 
 - `;extension: zip` uncommenten in `php.ini` zodat het installatieproces versnelt wordt en geen problemen gooit
 - .env moet bestaan omdat de waarden hieruit uitgelezen worden door de applicatie.
@@ -23,8 +23,7 @@ Volg de bovenstaande stappen om de applicatie klaar te zetten voor het eerste ge
 
 Nadat je geen bekende foutmeldingen meer krijgt kan je `php artisan migrate` uitvoeren om de eerste tabelopstelling te genereren.
 
-===
-## Foutmeldingen + fixes
+## Foutmeldingen en oplossingen
 -  MissingAppKeyException: (komt omdat APP_KEY in .env niet is gezet.)
     `php artisan key:generate` kan uitgevoerd worden om de APP_KEY value in de .env automatisch te vullen met een gegenereerde sleutel
 
@@ -36,13 +35,12 @@ Nadat je geen bekende foutmeldingen meer krijgt kan je `php artisan migrate` uit
         - extension=pdo_sqlite
         - extension=sqlite3
 
-===
 ## Handige commando's
 - `php.ini`-locatie vinden:
     `php --ini`
 
-===
-## Migratie informatie
+# Migraties
+## Algemene migratie informatie
 Tabel hernoemen: (`hasTable` zou nodig kunnen zijn voor het geval dat de tabel mogelijk niet bestaat wanneer de `down()` functie aangeroepen wordt)
 ```php
 if (Schema::hasTable('visitors')) {
@@ -50,26 +48,26 @@ if (Schema::hasTable('visitors')) {
 }
 ```
 
-## Migratie maken
+## Het aanmaken van een migratie
 `php artisan make:migration <action_<tablename>_table` maakt een scaffolding bestand aan.
 Bevat de `up()` en `down()` functies. Hierin kunnen acties worden toegevoegd die uitgevoerd dienen te worden wanneer de migratie wordt uitgevoerd.
 
 ## Alle migraties opnieuw uitvoeren
 `php artisan migrate:refresh`
 
-## Alle migraties die nog niet zijn uitgevoerd uitvoeren
+## Alle onuitgevoerde migraties uitvoeren
 `php artisan migrate`
 
 ## Migratiestatus inzien
 `php artisan migrate:status`
 
-## ALLE migraties terugrollen
+## Alle migraties terugrollen
 `php artisan migrate:rollback`
 
-## Specifiek aantal migraties terugrollen
+## Een specifiek aantal migraties terugrollen (ongedaan maken)
 `php artisan migrate:rollback --step=2`
 
-## Migraties 'pretenden' en SQL query ervan inzien
+## Migraties 'pretenden' en SQL query ervan inzien (deze migraties worden opgevangen en worden niet daadwerkelijk toegepast op de database)
 `php artisan migrate --pretend`
 
 ## Informatieve bronnen
