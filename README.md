@@ -2,7 +2,7 @@
 **Volg de onderstaande stappen om de applicatie klaar te zetten voor het eerste gebruik!**
 
 - `;extension: zip` uncommenten in `php.ini` zodat het installatieproces versnelt wordt en geen problemen gooit
-- .env moet bestaan omdat de waarden hieruit uitgelezen worden door de applicatie.
+- Het `.env` moet bestaan omdat de waarden hieruit uitgelezen worden door de applicatie.
 - Het `database/database.sqlite` bestand moet bestaan om een connectie te kunnen maken met de database.
 
 1. Installeer afhankelijkheden (dependencies): `composer install`
@@ -17,8 +17,8 @@ Volg de bovenstaande stappen om de applicatie klaar te zetten voor het eerste ge
 ---
 
 ## Algemene informatie
-- Error log bestanden staan in logs/laravel.log
-- Je krijgt een Server Error 500 wanneer je geen .env bestand hebt.
+- Error log bestanden staan in `logs/laravel.log`
+- Je krijgt een Server Error 500 wanneer je geen `.env` bestand hebt.
 - sqlite databaseviewer in VSCode moet ververst worden na het uitvoeren van een migratie om de wijzigingen te laten zien.
 
 Nadat je geen bekende foutmeldingen meer krijgt kan je `php artisan migrate` uitvoeren om de eerste tabelopstelling te genereren.
