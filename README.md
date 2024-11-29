@@ -1,9 +1,9 @@
 # Workshop - Databasemigraties met Laravel
 Volg de onderstaande stappen om de applicatie klaar te zetten voor het eerste gebruik!
 
-- `;extension: zip` uncommenten in `php.ini` (zodat het installatieproces versnelt wordt en geen problemen gooit)
-- .env moet bestaan
-- Het `database/database.sqlite` bestand moet aangemaakt worden
+- `;extension: zip` uncommenten in `php.ini` zodat het installatieproces versnelt wordt en geen problemen gooit
+- .env moet bestaan omdat de waarden hieruit uitgelezen worden door de applicatie.
+- Het `database/database.sqlite` bestand moet bestaan om een connectie te kunnen maken met de database.
 
 1. Installeer afhankelijkheden (dependencies): `composer install`
 2. Setup toepassen: `php artisan migrate`
