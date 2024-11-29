@@ -43,7 +43,7 @@ Nadat je geen bekende foutmeldingen meer krijgt kan je `php artisan migrate` uit
 
 ===
 ## Migratie informatie
-Tabel hernoemen: (`hasTable` nodig voor wanneer `down()` aangeroepen wordt)
+Tabel hernoemen: (`hasTable` zou nodig kunnen zijn voor het geval dat de tabel mogelijk niet bestaat wanneer de `down()` functie aangeroepen wordt)
 ```php
 if (Schema::hasTable('visitors')) {
     Schema::rename('visitors', 'users');
@@ -52,7 +52,7 @@ if (Schema::hasTable('visitors')) {
 
 ## Migratie maken
 `php artisan make:migration <action_<tablename>_table` maakt een scaffolding bestand aan.
-Inhoud de migratie (dus wat de migratie moet doen) moet nog geschreven worden.
+Bevat de `up()` en `down()` functies. Hierin kunnen acties worden toegevoegd die uitgevoerd dienen te worden wanneer de migratie wordt uitgevoerd.
 
 ## Alle migraties opnieuw uitvoeren
 `php artisan migrate:refresh`
