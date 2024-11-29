@@ -3,7 +3,7 @@ Volg de onderstaande stappen om de applicatie klaar te zetten voor het eerste ge
 
 - `;extension: zip` uncommenten in `php.ini` (zodat het installatieproces versnelt wordt en geen problemen gooit)
 - .env moet bestaan
-- Het `database/database.sqlite` bestsand moet aangemaakt worden
+- Het `database/database.sqlite` bestand moet aangemaakt worden
 
 1. Installeer afhankelijkheden (dependencies): `composer install`
 2. Setup toepassen: `php artisan migrate`
